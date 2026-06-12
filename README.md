@@ -24,7 +24,6 @@ This service automates that process by:
 
 ## 🏗 Architecture
 
-```text
 Frontend Client
        │
        ▼
@@ -44,9 +43,7 @@ Generated Email Reply
        │
        ▼
 Frontend Client
-```
 
----
 
 ## ⚙️ Tech Stack
 
