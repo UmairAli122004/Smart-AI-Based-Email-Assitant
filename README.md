@@ -57,10 +57,6 @@ Frontend Client
 | Gemini API     | AI Content Generation      |
 | Maven          | Dependency Management      |
 
----
-```
-
----
 
 # 🔥 Core Features
 
@@ -111,7 +107,6 @@ POST /api/email/generate
 
 ### Sample Response
 
-```text
 Thank you for reaching out.
 
 I appreciate the opportunity and would be happy to participate in the interview process. Please let me know the available dates and times.
@@ -119,9 +114,6 @@ I appreciate the opportunity and would be happy to participate in the interview 
 I look forward to speaking with you.
 
 Best regards
-```
-
----
 
 # 🧠 Prompt Engineering Strategy
 
@@ -138,8 +130,6 @@ Prompt objectives:
 
 This approach ensures consistent and predictable AI responses.
 
----
----
 
 # 📖 Key Components
 
@@ -154,13 +144,8 @@ The business layer responsible for:
 
 This is the core component of the application.
 
----
-
----
-
 # 🔄 Request Lifecycle
 
-```text
 1. User submits email content
           │
           ▼
@@ -180,7 +165,6 @@ This is the core component of the application.
           │
           ▼
 7. Email reply returned to client
-```
 
 
 # Email Writer Assistant Chrome Extension
