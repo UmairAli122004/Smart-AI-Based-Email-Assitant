@@ -86,6 +86,7 @@ Sensitive Gemini credentials are stored securely using environment variables.
 ---
 
 # 🌐 API Documentation
+```
 
 ## Generate Email Reply
 
