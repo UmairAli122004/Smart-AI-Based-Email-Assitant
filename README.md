@@ -185,6 +185,185 @@ This is the core component of the application.
 7. Email reply returned to client
 ```
 
+
+# Email Writer Assistant Chrome Extension
+
+## Overview
+
+Email Writer Assistant is a Chrome Extension that integrates directly with Gmail and helps users generate AI-powered email replies with a single click.
+
+The extension adds an **"AI Reply"** button to the Gmail compose window. When clicked, it sends the selected email content to a backend API, generates a professional response using AI, and automatically inserts the generated reply into the compose box.
+
+---
+
+## Features
+
+* Integrates seamlessly with Gmail.
+* Adds an **AI Reply** button to the compose window.
+* Generates professional email responses using AI.
+* Automatically inserts generated replies into Gmail.
+* Lightweight and easy to use.
+* Built using Manifest V3.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* JavaScript
+* HTML
+* CSS
+* Chrome Extension Manifest V3
+
+### Backend
+
+* Java
+* Spring Boot
+* REST API
+
+### AI Integration
+
+* Gemini API / LLM Backend
+
+---
+
+## Project Structure
+
+```text
+email-writer-ext/
+│
+├── manifest.json
+├── content.js
+├── content.css
+└── icons/
+```
+
+---
+
+## How It Works
+
+1. User opens Gmail.
+2. Extension detects the Gmail compose window.
+3. An **AI Reply** button is injected into the compose toolbar.
+4. User clicks the button.
+5. Extension extracts the email content.
+6. Content is sent to the backend API:
+
+```http
+POST http://localhost:8080/api/email/generate
+```
+
+7. Backend generates an AI-powered response.
+8. Generated response is inserted into the Gmail compose box.
+
+---
+
+## Permissions Used
+
+### Active Tab
+
+Allows the extension to interact with the current Gmail tab.
+
+```json
+"permissions": ["activeTab", "storage"]
+```
+
+### Host Permissions
+
+```json
+"host_permissions": [
+  "http://localhost:8080/*",
+  "*://mail.google.com/*"
+]
+```
+
+These permissions allow:
+
+* Communication with the backend API.
+* Access to Gmail pages.
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+### Load Extension in Chrome
+
+1. Open Chrome.
+2. Navigate to:
+
+```text
+chrome://extensions
+```
+
+3. Enable **Developer Mode**.
+4. Click **Load Unpacked**.
+5. Select the `email-writer-ext` folder.
+
+The extension is now installed.
+
+---
+
+## Backend Setup
+
+Start the Spring Boot backend application.
+
+Ensure the backend is running on:
+
+```text
+http://localhost:8080
+```
+
+API Endpoint:
+
+```http
+POST /api/email/generate
+```
+
+Expected Request:
+
+```json
+{
+  "emailContent": "Original email content",
+  "tone": "professional"
+}
+```
+
+Expected Response:
+
+```text
+Generated AI email reply
+```
+
+---
+
+## Future Enhancements
+
+* Multiple reply tones:
+
+  * Professional
+  * Friendly
+  * Formal
+  * Casual
+
+* Custom prompt templates.
+
+* Reply length selection.
+
+* Dark mode support.
+
+* Multi-language support.
+
+* Support for Outlook and other email clients.
+
+---
+
 ---
 
 # 🚧 Future Enhancements
