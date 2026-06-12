@@ -1,4 +1,4 @@
-# 🚀 Email Writer Assistant - Backend
+# 🚀 Email Writer Assistant
 
 AI-powered email reply generation service built with **Spring Boot** and **Google Gemini AI**.
 
@@ -61,25 +61,6 @@ Frontend Client
 | Maven          | Dependency Management      |
 
 ---
-
-# 📂 Project Structure
-
-```text
-src/main/java/com/email/writer
-
-├── Configuration
-│   └── Config.java
-│
-├── Controller
-│   └── EmailGeneratorController.java
-│
-├── Entity
-│   └── EmailRequest.java
-│
-├── Service
-│   └── EmailGeneratorService.java
-│
-└── EmailWriterApplication.java
 ```
 
 ---
@@ -129,14 +110,6 @@ POST /api/email/generate
   "tone": "Professional"
 }
 ```
-
-### Request Model
-
-| Field        | Type   | Required |
-| ------------ | ------ | -------- |
-| emailContent | String | ✅        |
-| tone         | String | ❌        |
-
 ---
 
 ### Sample Response
@@ -169,88 +142,6 @@ Prompt objectives:
 This approach ensures consistent and predictable AI responses.
 
 ---
-
-# 🔧 Configuration
-
-## application.properties
-
-```properties
-spring.application.name=email-writer-sb
-
-gemini.api.url=${GEMINI_API_URL}
-gemini.api.key=${GEMINI_API_KEY}
-```
-
----
-
-## Environment Variables
-
-```bash
-GEMINI_API_URL=https://generativelanguage.googleapis.com
-
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-Never commit API keys to source control.
-
----
-
-# 🚀 Getting Started
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/email-writer-backend.git
-
-cd email-writer-backend
-```
-
----
-
-## Install Dependencies
-
-```bash
-mvn clean install
-```
-
----
-
-## Run Application
-
-```bash
-mvn spring-boot:run
-```
-
-or
-
-```bash
-java -jar target/email-writer-backend.jar
-```
-
-
-
-### Body
-
-```json
-{
-  "emailContent": "Thank you for your application.",
-  "tone": "Friendly"
-}
-```
-
----
-
-Using cURL:
-
-```bash
-curl --location 'http://localhost:8080/api/email/generate' \
---header 'Content-Type: application/json' \
---data '{
-    "emailContent":"Thank you for your application.",
-    "tone":"Professional"
-}'
-```
-
 ---
 
 # 📖 Key Components
