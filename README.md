@@ -59,6 +59,7 @@ Frontend Client
 
 
 # 🔥 Core Features
+```
 
 ### AI Email Reply Generation
 
@@ -89,7 +90,7 @@ Sensitive Gemini credentials are stored securely using environment variables.
 ```
 
 ## Generate Email Reply
-
+```
 ### Endpoint
 
 ```http
@@ -97,7 +98,7 @@ POST /api/email/generate
 ```
 
 ### Request Body
-
+```
 ```json
 {
   "emailContent": "Thank you for applying. We would like to schedule an interview.",
@@ -107,7 +108,7 @@ POST /api/email/generate
 ---
 
 ### Sample Response
-
+```
 Thank you for reaching out.
 
 I appreciate the opportunity and would be happy to participate in the interview process. Please let me know the available dates and times.
@@ -166,7 +167,7 @@ This is the core component of the application.
           │
           ▼
 7. Email reply returned to client
-
+```
 
 # Email Writer Assistant Chrome Extension
 
